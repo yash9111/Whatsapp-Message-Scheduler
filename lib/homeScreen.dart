@@ -138,9 +138,9 @@ class _homeScreenState extends State<homeScreen> {
   sendMessage(String msg, String phNo) async {
     var headers = {'Content-Type': 'application/json'};
     var request = http.Request('POST',
-        Uri.parse('https://api.ultramsg.com/instance70783/messages/chat'));
+        Uri.parse('REPLACE_WITH_YOUR_CUSTOM_ULTRAMSG_URL'));
     request.body = json
-        .encode({"token": "4bzvi2m8s3k8hbs1", "to": "+91$phNo", "body": msg});
+        .encode({"token": "REPLACE_WITH_YOUR_PRIVATE_TOKEN", "to": "+91$phNo", "body": msg});
     request.headers.addAll(headers);
 
     http.StreamedResponse response = await request.send();
